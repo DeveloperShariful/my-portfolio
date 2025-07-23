@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Layout from '../components/layout';
-import Seo from '../components/seo'; // SEO ইম্পোর্ট
+import Layout from '../components/Layout';
+import Seo from '../components/Seo'; // SEO ইম্পোর্ট
 import * as styles from '../styles/HomePage.module.css';
 
 const IndexPage = () => {
