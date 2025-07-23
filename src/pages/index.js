@@ -50,8 +50,8 @@ const IndexPage = () => {
               <h4>Project Title One</h4>
               <p>A short, engaging description of what this project does and the problem it solves.</p>
               <div className={styles.projectLinks}>
-                <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                <a href="#" target="_blank" rel="noopener noreferrer">Source Code</a>
+                <a href="https://your-project-live-url.com" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="https://github.com/DeveloperShariful/your-project-repo" target="_blank" rel="noopener noreferrer">Source Code</a>
               </div>
             </div>
           </div>
@@ -61,8 +61,8 @@ const IndexPage = () => {
               <h4>Project Title Two</h4>
               <p>A short, engaging description of what this project does and the problem it solves.</p>
               <div className={styles.projectLinks}>
-                <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                <a href="#" target="_blank" rel="noopener noreferrer">Source Code</a>
+                <a href="https://your-project-live-url.com" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="https://github.com/DeveloperShariful/your-project-repo" target="_blank" rel="noopener noreferrer">Source Code</a>
               </div>
             </div>
           </div>
@@ -72,8 +72,8 @@ const IndexPage = () => {
               <h4>Project Title Three</h4>
               <p>A short, engaging description of what this project does and the problem it solves.</p>
               <div className={styles.projectLinks}>
-                <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                <a href="#" target="_blank" rel="noopener noreferrer">Source Code</a>
+                <a href="https://your-project-live-url.com" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="https://github.com/DeveloperShariful/your-project-repo" target="_blank" rel="noopener noreferrer">Source Code</a>
               </div>
             </div>
           </div>

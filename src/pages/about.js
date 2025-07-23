@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../components/layout'; // আপনার layout.js ফাইল
+import Layout from '../components/Layout'; // আপনার layout.js ফাইল
 
 const AboutPage = () => {
   return (
