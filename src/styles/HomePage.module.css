@@ -1,0 +1,169 @@
+/* General Section Styling */
+.section {
+  padding: 5rem 2rem;
+  border-bottom: 1px solid #e2e8f0; /* প্রতিটি সেকশনের নিচে হালকা বর্ডার */
+}
+
+/* 1. Hero Section */
+.hero {
+  text-align: center;
+  padding: 6rem 1rem;
+  background: linear-gradient(135deg, #f0f4f8, #ffffff);
+}
+.hero h1 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+.hero h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #4a5568;
+  margin: 1rem 0 1.5rem;
+}
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4a5568;
+}
+.ctaButton {
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  background-color: #3182ce;
+  color: white;
+  margin: 0 0.5rem;
+}
+.ctaButton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(49, 130, 206, 0.3);
+}
+
+/* 2. About Me Section */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* ছবির জন্য ১ ভাগ, লেখার জন্য ২ ভাগ */
+  gap: 3rem;
+  align-items: center;
+}
+.profileImage {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #e2e8f0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  justify-self: center;
+}
+.about h3 {
+  font-size: 2.5rem;
+  color: #2d3748;
+}
+.about p {
+  line-height: 1.8;
+  color: #4a5568;
+  margin-top: 1rem;
+}
+
+/* 3. Featured Projects Section */
+.projects {
+  text-align: center;
+}
+.projects h3 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #2d3748;
+}
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+.projectCard {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.projectCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px -5px rgba(0,0,0,0.1);
+}
+.projectImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.projectInfo {
+  padding: 1.5rem;
+}
+.projectInfo h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.projectInfo p {
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+.projectLinks a {
+  margin-right: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #3182ce;
+}
+
+/* 4. Skills Section */
+.skills {
+  text-align: center;
+}
+.skills h3 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #2d3748;
+}
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.skillCategory {
+  background: #f7fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+.skillCategory h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.skillCategory ul {
+  list-style: none;
+  padding: 0;
+}
+.skillCategory li {
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+/* 5. Call to Action (CTA) Section */
+.cta {
+  background-color: #2d3748;
+  color: white;
+  text-align: center;
+  border-bottom: none;
+}
+.cta h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.cta p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
