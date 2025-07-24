@@ -1,228 +1,97 @@
-/* General Section Styling */
+/* src/styles/HomePage.module.css */
 .section {
-  padding: 5rem 2rem;
+  padding: 6rem 2rem;
   border-bottom: 1px solid #e2e8f0;
+}
+.section:last-child {
+  border-bottom: none;
+}
+.sectionTitle {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+.sectionSubtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #64748b;
+  max-width: 700px;
+  margin: 0 auto 4rem;
 }
 
 /* 1. Hero Section */
+/* src/styles/HomePage.module.css */
+
+/* শুধুমাত্র এই .hero ক্লাসটি পরিবর্তন করুন */
 .hero {
   text-align: center;
-  padding: 6rem 1rem;
-  background: linear-gradient(135deg, #f0f4f8, #ffffff);
+  padding: 8rem 1rem;
+  background-color: #f8fafc; /* হালকা ব্যাকগ্রাউন্ড */
+  background-image: 
+    radial-gradient(circle at 100% 0%, rgba(59, 130, 246, 0.1) 0%, transparent 30%),
+    radial-gradient(circle at 0% 100%, rgba(59, 130, 246, 0.08) 0%, transparent 30%);
+  border-bottom: 1px solid #e2e8f0;
 }
-.hero h1 {
-  font-size: 3.8rem;
-  font-weight: 700;
-  color: #2d3748;
-}
-.hero h2 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #4a5568;
-  margin: 1rem 0 1.5rem;
-  min-height: 50px; /* টাইপিং অ্যানিমেশন যেন লাফালাফি না করে */
-}
-.hero p {
-  max-width: 650px;
-  margin: 0 auto 2.5rem;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #4a5568;
-}
-.ctaButton {
-  padding: 0.8rem 2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease-in-out;
-  background-color: #3182ce;
-  color: white;
-  margin: 0 0.5rem;
-}
-.ctaButton:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px -10px rgba(49, 130, 206, 0.4);
-}
+/* বাকি সব কোড যেমন আছে তেমনই থাকবে */
+.hero h1 { font-size: 4rem; font-weight: 900; }
+.hero h2 { font-size: 2rem; color: #3b82f6; margin: 1rem 0; min-height: 60px; }
+.hero p { max-width: 600px; margin: 0 auto 2.5rem; }
+.ctaButton { padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; background-color: #3b82f6; color: white; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); }
+.ctaButton:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4); }
+.heroButtons { display: flex; justify-content: center; gap: 1rem; }
 
 /* 2. About Me Section */
-.about {
-  display: grid;
-  grid-template-columns: 1fr; /* মোবাইল ডিভাইসের জন্য */
-  gap: 3rem;
-  align-items: center;
-}
-@media (min-width: 768px) {
-  .about {
-    grid-template-columns: 1fr 2fr; /* ছবির জন্য ১ ভাগ, লেখার জন্য ২ ভাগ */
-  }
-}
-.profileImage {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid #e2e8f0;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-  justify-self: center;
-}
-.about h3 {
-  font-size: 2.5rem;
-  color: #2d3748;
-}
-.about p {
-  line-height: 1.8;
-  color: #4a5568;
-  margin-top: 1rem;
-}
-.strengths {
-  list-style: none;
-  padding: 0;
-  margin-top: 1.5rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.5rem;
-}
-@media (min-width: 500px) {
-  .strengths {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-.strengths li {
-  color: #4a5568;
-  display: flex;
-  align-items: center;
-}
-.strengths svg {
-  color: #38a169;
-  margin-right: 0.5rem;
-  font-size: 1.2rem;
-}
+.about { display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: center; max-width: 1100px; margin: auto; }
+@media (min-width: 992px) { .about { grid-template-columns: 1fr 1.5fr; } }
+.imageContainer { position: relative; width: 300px; height: 300px; justify-self: center; }
+.profileImage { width: 100%; height: 100%; border-radius: 20px; object-fit: cover; position: relative; z-index: 2; }
+.imageContainer::after { content: ''; position: absolute; width: 100%; height: 100%; border: 5px solid #3b82f6; border-radius: 20px; top: 20px; left: 20px; z-index: 1; }
+.about h3 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+.strengths { list-style: none; padding: 0; margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.strengths li { display: flex; align-items: center; }
+.strengths svg { color: #10b981; margin-right: 0.75rem; font-size: 1.4rem; }
+
+/* 3. What I Do / Services Section */
+.services { background-color: #f8fafc; }
+.servicesGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+.serviceCard { background: #ffffff; padding: 2.5rem; border-radius: 10px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: all 0.3s ease; }
+.serviceCard:hover { transform: translateY(-10px); box-shadow: 0 20px 30px rgba(0,0,0,0.1); }
+.serviceCard svg { font-size: 3rem; color: #3b82f6; margin-bottom: 1.5rem; }
+.serviceCard h4 { font-size: 1.5rem; margin-bottom: 1rem; color: #1e293b; }
+
 
 /* 3. Featured Projects Section */
-.projects {
-  text-align: center;
-  background-color: #ffffff;
-}
-.projects h3 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #2d3748;
-}
-.projectGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-}
-.projectCard {
-  background: #ffffff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.projectCard:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 25px -5px rgba(0,0,0,0.1);
-}
-.projectImage {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-.projectInfo {
-  padding: 1.5rem;
-}
-.projectInfo h4 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-.projectInfo p {
-  color: #4a5568;
-  margin-bottom: 1rem;
-}
-.projectLinks a {
-  margin-right: 1rem;
-  text-decoration: none;
-  font-weight: bold;
-  color: #3182ce;
-}
+.projects { background-color: #f8fafc; text-align: center; }
+.projectGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+.projectCard { background: #ffffff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: left; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.projectCard:hover { transform: translateY(-8px); box-shadow: 0 15px 25px -5px rgba(0,0,0,0.1); }
+.projectImage { width: 100%; height: 200px; object-fit: cover; }
+.projectInfo { padding: 1.5rem; }
+.projectInfo h4 { font-size: 1.5rem; margin-bottom: 0.5rem; color: #1e293b; }
+.projectInfo p { margin-bottom: 1rem; }
+.projectLinks a { margin-right: 1rem; text-decoration: none; font-weight: bold; color: #3b82f6; }
 
-/* 4. Skills Section */
-.skills {
-  background-color: #f7fafc;
-}
-.skills h3, .whyWorkWithMe h3 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #2d3748;
-}
-.skillGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1.5rem;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-}
-.skillItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-.skillItem svg {
-  font-size: 3rem;
-  color: #3182ce;
-}
-.skillItem p {
-  font-weight: 500;
-  color: #4a5568;
-}
+/* 4. My Tech Stack Section */
+.skills { background-color: #ffffff; }
+.skillGrid { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 900px; margin: auto; }
+.skillCard { background: #f8fafc; padding: 1.5rem; border-radius: 10px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1rem; width: 150px; transition: all 0.3s ease; }
+.skillCard:hover { transform: translateY(-10px); background-color: white; box-shadow: 0 15px 25px rgba(0,0,0,0.1); }
+.skillCard svg { font-size: 4rem; color: #3b82f6; }
+.skillCard p { font-weight: 500; }
 
 /* 5. Why Work With Me Section */
-.whyWorkWithMe {
-  background-color: #ffffff;
-}
-.featuresGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
-}
-.featureCard {
-  padding: 2rem;
-}
-.featureCard svg {
-  font-size: 3rem;
-  color: #3182ce;
-  margin-bottom: 1rem;
-}
-.featureCard h4 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-.featureCard p {
-  color: #4a5568;
-}
+.whyWorkWithMe { background-color: #f8fafc; }
+.featuresGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; text-align: center; }
+.featureCard { padding: 2rem; }
+.featureCard svg { font-size: 3rem; color: #3b82f6; margin-bottom: 1rem; }
+.featureCard h4 { font-size: 1.5rem; margin-bottom: 0.5rem; }
 
-/* 6. Call to Action (CTA) Section */
-.cta {
-  background: linear-gradient(135deg, #4299e1, #3182ce);
-  color: white;
-  text-align: center;
-  border-bottom: none;
-}
-.cta h3 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: white;
-}
-.cta p {
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  color: #ebf8ff;
-}
+/* 6. Testimonials Section */
+.testimonials { background-color: #ffffff; }
+.testimonialCard { background: linear-gradient(135deg, #3b82f6, #60a5fa); color: white; padding: 3rem; border-radius: 20px; max-width: 800px; margin: 0 auto; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3); text-align: center; position: relative; }
+.testimonialImage { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin: -5rem auto 1.5rem; border: 5px solid white; }
+.testimonialText { font-size: 1.2rem; font-style: italic; margin-bottom: 1.5rem; }
+.testimonialAuthor { font-weight: 700; }
+.testimonialAuthor span { font-weight: 400; display: block; opacity: 0.8; }
