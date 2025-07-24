@@ -1,0 +1,51 @@
+/* src/styles/AboutPage.module.css */
+
+.aboutSection {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* বড় স্ক্রিনের জন্য (যেমন ল্যাপটপ) */
+@media (min-width: 768px) {
+  .gridContainer {
+    grid-template-columns: 300px 1fr; /* ছবির জন্য একটি নির্দিষ্ট জায়গা */
+  }
+}
+
+.profileImage {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #e2e8f0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  justify-self: center; /* গ্রিডের মধ্যে সেন্টারে থাকবে */
+}
+
+.textContent h1 {
+  font-size: 2.8rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.textContent h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+.textContent p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 1rem;
+}

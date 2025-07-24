@@ -1,7 +1,7 @@
 /* General Section Styling */
 .section {
   padding: 5rem 2rem;
-  border-bottom: 1px solid #e2e8f0; /* প্রতিটি সেকশনের নিচে হালকা বর্ডার */
+  border-bottom: 1px solid #e2e8f0;
 }
 
 /* 1. Hero Section */
@@ -20,6 +20,7 @@
   font-weight: 400;
   color: #4a5568;
   margin: 1rem 0 1.5rem;
+  min-height: 50px; /* টাইপিং অ্যানিমেশন যেন লাফালাফি না করে */
 }
 .hero p {
   max-width: 650px;
@@ -33,22 +34,27 @@
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
   background-color: #3182ce;
   color: white;
   margin: 0 0.5rem;
 }
 .ctaButton:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px rgba(49, 130, 206, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px -10px rgba(49, 130, 206, 0.4);
 }
 
 /* 2. About Me Section */
 .about {
   display: grid;
-  grid-template-columns: 1fr 2fr; /* ছবির জন্য ১ ভাগ, লেখার জন্য ২ ভাগ */
+  grid-template-columns: 1fr; /* মোবাইল ডিভাইসের জন্য */
   gap: 3rem;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .about {
+    grid-template-columns: 1fr 2fr; /* ছবির জন্য ১ ভাগ, লেখার জন্য ২ ভাগ */
+  }
 }
 .profileImage {
   width: 250px;
@@ -68,10 +74,34 @@
   color: #4a5568;
   margin-top: 1rem;
 }
+.strengths {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+@media (min-width: 500px) {
+  .strengths {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.strengths li {
+  color: #4a5568;
+  display: flex;
+  align-items: center;
+}
+.strengths svg {
+  color: #38a169;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
 
 /* 3. Featured Projects Section */
 .projects {
   text-align: center;
+  background-color: #ffffff;
 }
 .projects h3 {
   font-size: 2.5rem;
@@ -120,41 +150,68 @@
 
 /* 4. Skills Section */
 .skills {
-  text-align: center;
+  background-color: #f7fafc;
 }
-.skills h3 {
+.skills h3, .whyWorkWithMe h3 {
+  text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
   color: #2d3748;
 }
-.skillsGrid {
+.skillGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1.5rem;
   max-width: 900px;
   margin: 0 auto;
+  text-align: center;
 }
-.skillCategory {
-  background: #f7fafc;
-  padding: 1.5rem;
-  border-radius: 8px;
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
-.skillCategory h4 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
+.skillItem svg {
+  font-size: 3rem;
+  color: #3182ce;
 }
-.skillCategory ul {
-  list-style: none;
-  padding: 0;
-}
-.skillCategory li {
+.skillItem p {
+  font-weight: 500;
   color: #4a5568;
-  margin-bottom: 0.5rem;
 }
 
-/* 5. Call to Action (CTA) Section */
+/* 5. Why Work With Me Section */
+.whyWorkWithMe {
+  background-color: #ffffff;
+}
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.featureCard {
+  padding: 2rem;
+}
+.featureCard svg {
+  font-size: 3rem;
+  color: #3182ce;
+  margin-bottom: 1rem;
+}
+.featureCard h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.featureCard p {
+  color: #4a5568;
+}
+
+/* 6. Call to Action (CTA) Section */
 .cta {
-  background-color: #2d3748;
+  background: linear-gradient(135deg, #4299e1, #3182ce);
   color: white;
   text-align: center;
   border-bottom: none;
@@ -162,8 +219,10 @@
 .cta h3 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: white;
 }
 .cta p {
   max-width: 600px;
   margin: 0 auto 2rem;
+  color: #ebf8ff;
 }
