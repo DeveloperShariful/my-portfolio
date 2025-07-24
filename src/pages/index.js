@@ -44,15 +44,28 @@ const IndexPage = () => {
       
       {/* 1. Hero Section */}
       <section className={styles.hero}>
-        <FadeInSection>
-          <h1>Sharif ul Islam</h1>
-          <h2>{text}<Cursor /></h2>
-          <p>I build exceptional and accessible digital experiences for the web, from concept to deployment.</p>
-          <div className={styles.heroButtons}>
-            <Link to="/projects/" className={styles.ctaButton}>My Work</Link>
-            <Link to="/contact/" className={styles.ctaButton}>Hire Me</Link>
+        <div className={styles.heroContent}>
+          <div className={styles.heroText}>
+            <FadeInSection>
+              <h1>Sharif ul Islam</h1>
+              <h2>{text}<Cursor /></h2>
+              <p>I build exceptional and accessible digital experiences for the web, from concept to deployment.</p>
+              <div className={styles.heroButtons}>
+                <Link to="/projects/" className={styles.ctaButton}>My Work</Link>
+                <Link to="/contact/" className={styles.ctaButton}>Hire Me</Link>
+              </div>
+            </FadeInSection>
           </div>
-        </FadeInSection>
+          <div className={styles.heroImageContainer}>
+            <FadeInSection>
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto-format&fit-crop"
+                  alt="Sharif ul Islam"
+                  className={styles.heroImage}
+                />
+            </FadeInSection>
+          </div>
+        </div>
       </section>
 
       {/* 2. About Me Section */}

@@ -11,7 +11,7 @@
   z-index: 1000;
 }
 .logo {
-  margin-left: 20rem;
+  margin-left: 10rem;
 }
 
 
@@ -22,7 +22,7 @@
   color: #1e293b;
 }
 .nav{
-  margin-right: 20rem;
+  margin-right: 10rem;
 }
 
 .nav a {
@@ -79,15 +79,20 @@
     position: absolute;
     top: 0;
     right: 0;
+    margin-right: 0rem;
     width: 250px;
     height: 100vh;
     background-color: white;
     padding-top: 5rem;
     box-shadow: -5px 0 15px rgba(0,0,0,0.1);
   }
+  .logo {
+  margin-left: 0;
+}
 
   .navOpen {
     display: flex; /* মেনু খোলা হলে দেখা যাবে */
+    
   }
 
   .nav a {
