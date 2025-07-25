@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image'; // ১. StaticImage ইম্পোর্ট করা হয়েছে
 import * as styles from './Header.module.css';
 import { FiMenu, FiX } from 'react-icons/fi'; // মেনু এবং ক্লোজ আইকন
 
@@ -24,7 +25,15 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <Link to="/">SharifulWebDevloper</Link>
+        <Link to="/">
+          <StaticImage
+            src="../images/logo.png" 
+            alt="Webmaster Logo"
+            placeholder="blurred"
+            layout="fixed"
+            width={180}
+          />
+        </Link>
       </div>
       
       <nav className={`${styles.nav} ${isOpen ? styles.navOpen : ''}`}>

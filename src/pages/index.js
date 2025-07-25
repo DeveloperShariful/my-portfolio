@@ -5,6 +5,7 @@ import Seo from '../components/Seo';
 import FadeInSection from '../components/FadeInSection';
 import * as styles from '../styles/HomePage.module.css';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import { StaticImage } from 'gatsby-plugin-image';
 
 // Icon Imports
 import { FaReact, FaNodeJs, FaDocker, FaGithub, FaFigma, FaPaintBrush, FaCode, FaRocket } from 'react-icons/fa';
@@ -44,38 +45,32 @@ const IndexPage = () => {
       
       {/* 1. Hero Section */}
       <section className={styles.hero}>
-        <div className={styles.heroContent}>
-          <div className={styles.heroText}>
-            <FadeInSection>
-              <h1>Sharif ul Islam</h1>
-              <h2>{text}<Cursor /></h2>
-              <p>I build exceptional and accessible digital experiences for the web, from concept to deployment.</p>
-              <div className={styles.heroButtons}>
-                <Link to="/projects/" className={styles.ctaButton}>My Work</Link>
-                <Link to="/contact/" className={styles.ctaButton}>Hire Me</Link>
-              </div>
-            </FadeInSection>
+        <FadeInSection>
+          <h1>Sharif ul Islam</h1>
+          <h2>{text}<Cursor /></h2>
+          <p>I build exceptional and accessible digital experiences for the web, from concept to deployment.</p>
+          <div className={styles.heroButtons}>
+            <Link to="/projects/" className={styles.ctaButton}>My Work</Link>
+            <Link to="/contact/" className={styles.ctaButton}>Hire Me</Link>
           </div>
-          <div className={styles.heroImageContainer}>
-            <FadeInSection>
-                <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto-format&fit-crop"
-                  alt="Sharif ul Islam"
-                  className={styles.heroImage}
-                />
-            </FadeInSection>
-          </div>
-        </div>
+        </FadeInSection>
       </section>
 
       {/* 2. About Me Section */}
+          <div className={styles.sectionHeader}>  {/* <<--- শুধু এই ক্লাস নামটি যোগ করুন */}
+            <h2>
+              About me
+            </h2>
+          </div>
       <FadeInSection>
         <section className={`${styles.about} ${styles.section}`}>
           <div className={styles.imageContainer}>
-            <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop"
-              alt="Sharif ul Islam" 
-              className={styles.profileImage}
+            <StaticImage 
+               src="../images/myself.png" // আপনার ছবির সঠিক পথ
+               alt="Sharif ul Islam" 
+               className={styles.profileImage}
+               placeholder="blurred"
+               layout="constrained"
             />
           </div>
           <div>

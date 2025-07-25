@@ -25,131 +25,44 @@
 /* src/styles/HomePage.module.css */
 
 /* শুধুমাত্র এই .hero ক্লাসটি পরিবর্তন করুন */
-/* src/styles/HomePage.module.css */
-
-/* ভাসমান ইমেজ অ্যানিমেশনের জন্য Keyframes */
-@keyframes floatAnimation {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
-}
-
-/* অ্যানিমেটেড গ্র্যাডিয়েন্ট ব্যাকগ্রাউন্ডের জন্য Keyframes */
-@keyframes animatedGradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* 1. Hero Section - সম্পূর্ণ নতুন ডিজাইন */
 .hero {
-  padding: 6rem 2rem;
-  background: linear-gradient(-45deg, #eef2ff, #f3f4f6, #dbeafe, #eff6ff);
-  background-size: 400% 400%;
-  animation: animatedGradient 15s ease infinite;
-  display: flex;
-  align-items: center;
-  min-height: 90vh;
+  text-align: center;
+  padding: 8rem 1rem;
+  background-color: #f8fafc; /* হালকা ব্যাকগ্রাউন্ড */
+  background-image: 
+    radial-gradient(circle at 100% 0%, rgba(59, 130, 246, 0.1) 0%, transparent 30%),
+    radial-gradient(circle at 0% 100%, rgba(59, 130, 246, 0.08) 0%, transparent 30%);
+  border-bottom: 1px solid #e2e8f0;
 }
-
-.heroContent {
-  display: grid;
-  grid-template-columns: 1fr; /* মোবাইল ডিভাইসে এক কলাম */
-  gap: 4rem;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-@media (min-width: 992px) {
-  .heroContent {
-    grid-template-columns: 1.2fr 1fr; /* বড় স্ক্রিনে দুই কলাম */
-    text-align: left;
-  }
-}
-
-.heroText {
-  text-align: center; /* মোবাইলে সেন্টারে থাকবে */
-}
-
-@media (min-width: 992px) {
-  .heroText {
-    text-align: left; /* বড় স্ক্রিনে বামে থাকবে */
-  }
-}
-
-.heroText h1 {
-  font-size: 4.5rem;
-  font-weight: 900;
-  line-height: 1.1;
-  color: #1e293b;
-}
-
-.heroText h2 {
-  font-size: 2rem;
-  color: #3b82f6;
-  margin: 1.5rem 0;
-  min-height: 60px;
-}
-
-.heroText p {
-  font-size: 1.2rem;
-  color: #475569;
-  max-width: 500px;
-  margin: 0 auto 2.5rem;
-}
-
-@media (min-width: 992px) {
-  .heroText p {
-    margin-left: 0;
-  }
-}
-
-.heroImageContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: floatAnimation 6s ease-in-out infinite;
-}
-
-.heroImage {
-  width: 350px;
-  height: 350px;
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* সুন্দর Blob Shape */
-  object-fit: cover;
-  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
-}
-
-.heroButtons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-@media (min-width: 992px) {
-  .heroButtons {
-    justify-content: flex-start;
-  }
-}
-
-/* বাকি সব সেকশনের স্টাইল যেমন ছিল তেমনই থাকবে */
-/* General Section Styling */
-.section { padding: 6rem 2rem; border-bottom: 1px solid #e2e8f0; }
-.section:last-child { border-bottom: none; }
-.sectionTitle { text-align: center; font-size: 3rem; font-weight: 700; margin-bottom: 1rem; color: #1e293b; }
-.sectionSubtitle { text-align: center; font-size: 1.2rem; color: #64748b; max-width: 700px; margin: 0 auto 4rem; }
-/* ... (বাকি সব CSS কোড এখানে পেস্ট করুন) ... */
+/* বাকি সব কোড যেমন আছে তেমনই থাকবে */
+.hero h1 { font-size: 4rem; font-weight: 900; }
+.hero h2 { font-size: 2rem; color: #3b82f6; margin: 1rem 0; min-height: 60px; }
+.hero p { max-width: 600px; margin: 0 auto 2.5rem; }
+.ctaButton { padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; background-color: #3b82f6; color: white; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); }
+.ctaButton:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4); }
+.heroButtons { display: flex; justify-content: center; gap: 1rem; }
 
 /* 2. About Me Section */
-.about { display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: center; max-width: 1100px; margin: auto; }
-@media (min-width: 992px) { .about { grid-template-columns: 1fr 1.5fr; } }
-.imageContainer { position: relative; width: 300px; height: 300px; justify-self: center; }
-.profileImage { width: 100%; height: 100%; border-radius: 20px; object-fit: cover; position: relative; z-index: 2; }
-.imageContainer::after { content: ''; position: absolute; width: 100%; height: 100%; border: 5px solid #3b82f6; border-radius: 20px; top: 20px; left: 20px; z-index: 1; }
-.about h3 { font-size: 2.5rem; margin-bottom: 1.5rem; }
-.strengths { list-style: none; padding: 0; margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-.strengths li { display: flex; align-items: center; }
+/* 2. About Me Section */
+.about { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; max-width: 1100px; margin: 0 auto; }
+.imageContainer { position: relative; width: 300px; height: 380px; justify-self: center; transition: transform 0.4s ease-in-out; }
+.profileImage { width: 100%; height: 100%; border-radius: 16px; object-fit: cover; position: relative; z-index: 3; transition: transform 0.4s ease-in-out; }
+.imageContainer::before, .imageContainer::after { content: ''; position: absolute; width: 100%; height: 100%; border-radius: 16px; transition: transform 0.4s ease-in-out; }
+.imageContainer::before { background: #3b82f6; top: 20px; left: 20px; z-index: 2; }
+.imageContainer::after { background: #e5e7eb; top: 40px; left: 40px; z-index: 1; }
+.imageContainer:hover { transform: rotate(-3deg); }
+.imageContainer:hover .profileImage { transform: translate(15px, -15px); }
+.about h3 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #111827; }
+.about p { line-height: 1.8; color: #4b5563; margin-bottom: 2rem; }
+.strengths { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.strengths li { display: flex; align-items: center; font-size: 1.1rem; }
 .strengths svg { color: #10b981; margin-right: 0.75rem; font-size: 1.4rem; }
+@media (min-width: 992px) { .about { grid-template-columns: 1fr 1.5fr; gap: 5rem; } }
+@media (max-width: 768px) { .imageContainer { width: 250px; height: 320px; } .about h3, .about p { text-align: center; } .strengths { justify-items: center; } }
+
+/* General Section Title Style */
+.sectionHeader { font-size: 2.2rem; font-weight: 700; color: #111827; text-align: center; margin-top: 3rem;}
+@media (max-width: 768px) { .sectionHeader { font-size: 2rem; } }
 
 /* 3. What I Do / Services Section */
 .services { background-color: #f8fafc; }

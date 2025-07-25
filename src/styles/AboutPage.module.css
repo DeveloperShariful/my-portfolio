@@ -1,51 +1,273 @@
 /* src/styles/AboutPage.module.css */
 
-.aboutSection {
-  padding: 4rem 2rem;
+/* Hero Section */
+.hero {
+  background-color: #f7fafc;
+  text-align: center;
+  padding: 5rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+.profileImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid white;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+}
+.hero h1 {
+  font-size: 3rem;
+  color: #2d3748;
+}
+.hero h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+.hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #4a5568;
+}
+
+/* General Section Styling */
+.section {
+  padding: 5rem 2rem;
   max-width: 900px;
   margin: 0 auto;
 }
-
-.gridContainer {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
-  align-items: center;
+.sectionTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #2d3748;
 }
 
-/* বড় স্ক্রিনের জন্য (যেমন ল্যাপটপ) */
-@media (min-width: 768px) {
-  .gridContainer {
-    grid-template-columns: 300px 1fr; /* ছবির জন্য একটি নির্দিষ্ট জায়গা */
+/* Journey / Timeline Section */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 3px solid #e2e8f0;
+}
+.timelineItem {
+  margin-bottom: 3rem;
+  position: relative;
+}
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+.timelineDot {
+  position: absolute;
+  left: -2.8rem;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #3182ce;
+  border: 4px solid white;
+  border-radius: 50%;
+}
+.timelineDate {
+  font-weight: bold;
+  color: #3182ce;
+  margin-bottom: 0.5rem;
+}
+.timelineContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.timelineContent p {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* Philosophy Section */
+.philosophyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.philosophyCard {
+  background-color: #f7fafc;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+.philosophyCard h4 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+.philosophyCard p {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* Animation Styles */
+.fadeUp {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* === নতুন সেকশন: My Skills === */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.skillCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 2rem;
+  border-radius: 12px;
+}
+.skillCard h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.skillCard ul {
+  list-style: none;
+  padding: 0;
+}
+.skillCard li {
+  color: #4a5568;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+/* স্কিল লিস্টের আগে একটি টিক চিহ্ন যোগ করা */
+.skillCard li::before {
+  content: '✓';
+  color: #38a169; /* সবুজ কালার */
+  position: absolute;
+  left: 0;
+}
+
+/* === নতুন সেকশন: My Workflow === */
+.workflowList {
+  list-style: none;
+  padding: 0;
+  counter-reset: workflow-counter; /* ধাপের নম্বর দেওয়ার জন্য */
+}
+.workflowItem {
+  margin-bottom: 2rem;
+  padding-left: 4rem;
+  position: relative;
+}
+/* ধাপের নম্বর স্টাইল করা */
+.workflowItem::before {
+  counter-increment: workflow-counter;
+  content: counter(workflow-counter);
+  position: absolute;
+  left: 0;
+  top: -5px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #e2e8f0;
+  z-index: -1;
+}
+.workflowItem h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.workflowItem p {
+  color: #4a5568;
+}
+
+/* === নতুন সেকশন: Outside of Code === */
+.interests {
+  background-color: #f7fafc;
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+}
+.interests p {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Animation Styles */
+.fadeUp {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* src/styles/AboutPage.module.css */
+
+/* --- আপনার আগের সব স্টাইল কোড এখানে থাকবে... --- */
+/* .hero { ... } */
+/* .profileImage { ... } */
+/* .timeline { ... } */
+/* ইত্যাদি... */
+
+
+/* === শুধুমাত্র এই অংশটুকু ফাইলের শেষে যোগ করুন === */
+
+/*  RESPONSIVE DESIGN - MEDIA QUERIES */
+/* ------------------------------------ */
+
+/* Tablet and smaller devices (স্ক্রিন যখন 992px এর চেয়ে ছোট হবে) */
+@media (max-width: 992px) {
+  .section {
+    padding: 4rem 1.5rem;
   }
 }
 
-.profileImage {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 6px solid #e2e8f0;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  justify-self: center; /* গ্রিডের মধ্যে সেন্টারে থাকবে */
+/* Mobile devices (স্ক্রিন যখন 768px এর চেয়ে ছোট হবে) */
+@media (max-width: 768px) {
+  .hero h1, .sectionTitle {
+    font-size: 2.2rem;
+  }
+  .hero h2 {
+    font-size: 1.3rem;
+  }
+  .profileImage {
+    width: 160px;
+    height: 160px;
+  }
+  
+  /* গ্রিডগুলোকে একটি কলামে নিয়ে আসা */
+  .philosophyGrid, .skillsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .workflowItem {
+    padding-left: 3.5rem;
+  }
+  .workflowItem::before {
+    font-size: 2rem;
+    top: 0;
+  }
 }
 
-.textContent h1 {
-  font-size: 2.8rem;
-  color: #2d3748;
-  margin-bottom: 1rem;
-}
-
-.textContent h2 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #4a5568;
-  margin-bottom: 1.5rem;
-}
-
-.textContent p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #4a5568;
-  margin-bottom: 1rem;
+/* Very small mobile devices (স্ক্রিন যখন 480px এর চেয়ে ছোট হবে) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+  .section {
+    padding: 3rem 1rem;
+  }
+  .hero h1, .sectionTitle {
+    font-size: 1.8rem;
+  }
+  .hero h2 {
+    font-size: 1.1rem;
+  }
+  .profileImage {
+    width: 140px;
+    height: 140px;
+  }
 }

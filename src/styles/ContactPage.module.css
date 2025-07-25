@@ -1,0 +1,175 @@
+/* src/styles/ContactPage.module.css */
+
+.contactPage {
+  background-color: #f8f9fa; /* হালকা ধূসর ব্যাকগ্রাউন্ড */
+}
+
+.pageHeader {
+  text-align: center;
+  padding: 5rem 1.5rem;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+}
+.pageHeader h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #343a40;
+}
+.pageHeader p {
+  font-size: 1.2rem;
+  color: #6c757d;
+  max-width: 650px;
+  margin: 1rem auto 0;
+}
+
+.contactLayout {
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0 15px 40px -15px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  margin-top: -3rem; /* হেডার সেকশনের উপর সুন্দরভাবে বসবে */
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* Contact Info Section (Left Side) */
+.contactInfo {
+  padding: 3rem;
+  background-color: #f1f3f5;
+}
+.contactInfo h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
+  color: #343a40;
+  border-left: 4px solid #495057;
+  padding-left: 1rem;
+}
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.infoIcon {
+  background-color: #e9ecef;
+  border-radius: 50%;
+  padding: 12px;
+  margin-right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.infoIcon svg {
+  width: 24px;
+  height: 24px;
+  color: #495057;
+}
+.infoText h4 {
+  margin: 0 0 0.3rem;
+  color: #343a40;
+}
+.infoText a, .infoText span {
+  font-size: 1rem;
+  color: #6c757d;
+  text-decoration: none;
+  word-break: break-all;
+}
+.infoText a:hover {
+  text-decoration: underline;
+}
+
+.socialLinks {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #dee2e6;
+}
+.socialLinks a {
+  margin-right: 1rem;
+  color: #6c757d;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+.socialLinks a:hover {
+  color: #343a40;
+  transform: scale(1.1);
+}
+.socialLinks svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* Contact Form Section (Right Side) */
+.contactForm {
+  padding: 3rem;
+}
+.contactForm h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+.formGroup {
+  margin-bottom: 2rem;
+  position: relative;
+}
+.formInput {
+  width: 100%;
+  padding: 1rem 0.5rem 0.5rem;
+  border: none;
+  border-bottom: 2px solid #dee2e6;
+  background: transparent;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.formInput:focus {
+  border-bottom-color: #495057;
+}
+/* ইন্টারেক্টিভ লেবেল */
+.formLabel {
+  position: absolute;
+  top: 0.8rem;
+  left: 0.5rem;
+  color: #6c757d;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+.formInput:focus + .formLabel,
+.formInput:not(:placeholder-shown) + .formLabel {
+  top: -1rem;
+  font-size: 0.8rem;
+  color: #495057;
+}
+.formTextarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.submitButton {
+  /* ... আগের কোড যেমন ছিল ... */
+  background-color: #000000;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.submitButton:hover {
+  background-color: #aaaaaa;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .contactLayout {
+    grid-template-columns: 1fr;
+    margin: 2rem 1.5rem;
+    margin-top: -2rem;
+  }
+}
+@media (max-width: 768px) {
+  .pageHeader h1 {
+    font-size: 2.8rem;
+  }
+}

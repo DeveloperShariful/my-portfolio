@@ -16,10 +16,8 @@
 
 
 .logo a {
-  font-weight: bold;
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: #1e293b;
+  display: flex;
+  align-items: center;
 }
 .nav{
   margin-right: 10rem;
