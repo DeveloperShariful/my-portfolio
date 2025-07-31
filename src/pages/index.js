@@ -155,6 +155,32 @@ const IndexPage = () => {
         </section>
       </FadeInSection>
       
+
+           {/* 5. My Tech Stack Section */}
+     <FadeInSection>
+        <section className={`${styles.skills} ${styles.section}`}>
+          <h3 className={styles.sectionTitle}>My Toolbox & Skills</h3>
+          <p className={styles.sectionSubtitle}>The tools and technologies I use to bring ideas to life.</p>
+          <div className={styles.skillGrid}>
+            <div className={styles.skillCard}><SiJavascript /><p>JavaScript</p></div>
+            <div className={styles.skillCard}><FaReact /><p>React</p></div>
+            <div className={styles.skillCard}><FaNodeJs /><p>Node.js</p></div>
+            <div className={styles.skillCard}><SiGatsby /><p>Gatsby</p></div>
+            <div className={styles.skillCard}><SiNextdotjs /><p>Next.js</p></div>
+            <div className={styles.skillCard}><SiTailwindcss /><p>Tailwind CSS</p></div>
+            <div className={styles.skillCard}><FaFigma /><p>Figma</p></div>
+            <div className={styles.skillCard}><FaGithub /><p>GitHub</p></div>
+      
+           {/* === এই নতুন কার্ডটি যোগ করুন === */}
+            <div className={styles.skillCard}>
+             <FaDocker />
+             <p>Docker</p>
+            </div>
+
+          </div>
+        </section>
+      </FadeInSection>
+
       {/* 6. Why Work With Me Section */}
       <FadeInSection>
         <section className={`${styles.whyWorkWithMe} ${styles.section}`}>
