@@ -91,7 +91,9 @@
 .skillCard:hover { transform: translateY(-10px); background-color: white; box-shadow: 0 15px 25px rgba(0,0,0,0.1); }
 .skillCard svg { font-size: 4rem; color: #3b82f6; }
 .skillCard p { font-weight: 500; }
-
+/* General Section Title Style */
+.skillCategories .category .categoryTitle { font-size: 2rem; font-weight: 600; color: #111827; text-align: center; margin-bottom: 3rem; margin-top: 1rem; }
+@media (max-width: 768px) {.skillCategories .category .categoryTitle { font-size: 1.2rem; } }
 /* 5. Why Work With Me Section */
 .whyWorkWithMe { background-color: #f8fafc; }
 .featuresGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; text-align: center; }

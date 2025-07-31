@@ -8,8 +8,11 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { StaticImage } from 'gatsby-plugin-image';
 
 // Icon Imports
-import { FaReact, FaNodeJs, FaDocker, FaGithub, FaFigma, FaPaintBrush, FaCode, FaRocket } from 'react-icons/fa';
-import { SiJavascript, SiGatsby, SiNextdotjs, SiTailwindcss } from 'react-icons/si';
+// src/pages/index.js ( উপরের দিকে )
+
+// ... other imports
+import { FaReact, FaNodeJs, FaGithub, FaFigma, FaPaintBrush, FaCode, FaRocket, FaShopify, FaWordpress } from 'react-icons/fa'; // FaShopify, FaWordpress যোগ করা হয়েছে
+import { SiJavascript, SiGatsby, SiNextdotjs, SiTailwindcss, SiExpress } from 'react-icons/si'; // SiExpress যোগ করা হয়েছে (উদাহরণ)
 import { GoGoal, GoLightBulb } from "react-icons/go";
 import { FiCheckCircle } from "react-icons/fi";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -67,7 +70,7 @@ const IndexPage = () => {
           <div className={styles.imageContainer}>
             <StaticImage 
                src="../images/myself.png" // আপনার ছবির সঠিক পথ
-               alt="Sharif ul Islam" 
+               alt="Shariful Islam" 
                className={styles.profileImage}
                placeholder="blurred"
                layout="constrained"
@@ -133,54 +136,51 @@ const IndexPage = () => {
                 <img src="https://images.unsplash.com/photo-1550089423-646714302636?q=80&w=1933&auto=format=fit&crop" alt="Portfolio Website" className={styles.projectImage} />
                 <div className={styles.projectInfo}><h4>Portfolio Website</h4><p>This personal portfolio site, built with Gatsby for blazing fast performance.</p><div className={styles.projectLinks}><a href="https://github.com" target="_blank" rel="noopener noreferrer">Live Demo</a><a href="https://github.com" target="_blank" rel="noopener noreferrer">Source Code</a></div></div>
               </div>
-            </div>
+           </div>
         </section>
       </FadeInSection>
 
-      {/* 5. My Tech Stack Section */}
+      {/* 5. My Toolbox & Skills Section */}
       <FadeInSection>
         <section className={`${styles.skills} ${styles.section}`}>
           <h3 className={styles.sectionTitle}>My Toolbox & Skills</h3>
           <p className={styles.sectionSubtitle}>The tools and technologies I use to bring ideas to life.</p>
-          <div className={styles.skillGrid}>
-            <div className={styles.skillCard}><SiJavascript /><p>JavaScript</p></div>
-            <div className={styles.skillCard}><FaReact /><p>React</p></div>
-            <div className={styles.skillCard}><FaNodeJs /><p>Node.js</p></div>
-            <div className={styles.skillCard}><SiGatsby /><p>Gatsby</p></div>
-            <div className={styles.skillCard}><SiNextdotjs /><p>Next.js</p></div>
-            <div className={styles.skillCard}><SiTailwindcss /><p>Tailwind CSS</p></div>
-            <div className={styles.skillCard}><FaFigma /><p>Figma</p></div>
-            <div className={styles.skillCard}><FaGithub /><p>GitHub</p></div>
+    
+          <div className={styles.skillCategories}>
+            {/* Category 1: Frontend */}
+             <div className={styles.category}>
+                <h4 className={styles.categoryTitle}>Frontend</h4>
+                  <div className={styles.skillGrid}>
+                      <div className={styles.skillCard}><SiJavascript /><p>JavaScript</p></div>
+                      <div className={styles.skillCard}><FaReact /><p>React</p></div>
+                      <div className={styles.skillCard}><SiGatsby /><p>Gatsby</p></div>
+                      <div className={styles.skillCard}><SiNextdotjs /><p>Next.js</p></div>
+                      <div className={styles.skillCard}><SiTailwindcss /><p>Tailwind CSS</p></div>
+                  </div>
+              </div>
+
+               {/* Category 2: Backend & Tools */}
+              <div className={styles.category}>
+                <h4 className={styles.categoryTitle}>Backend & Tools</h4>
+                <div className={styles.skillGrid}>
+                  <div className={styles.skillCard}><FaNodeJs /><p>Node.js</p></div>
+                  <div className={styles.skillCard}><FaFigma /><p>Figma</p></div>
+                  <div className={styles.skillCard}><FaGithub /><p>GitHub</p></div>
+                </div>
+              </div>
+
+              {/* Category 3: CMS & E-commerce */}
+              <div className={styles.category}>
+                <h4 className={styles.categoryTitle}>CMS & E-commerce</h4>
+                <div className={styles.skillGrid}>
+                  <div className={styles.skillCard}><FaWordpress /><p>WordPress</p></div>
+                  <div className={styles.skillCard}><FaShopify /><p>Shopify</p></div>
+                </div>
+              </div>
           </div>
-        </section>
-      </FadeInSection>
-      
-
-           {/* 5. My Tech Stack Section */}
-     <FadeInSection>
-        <section className={`${styles.skills} ${styles.section}`}>
-          <h3 className={styles.sectionTitle}>My Toolbox & Skills</h3>
-          <p className={styles.sectionSubtitle}>The tools and technologies I use to bring ideas to life.</p>
-          <div className={styles.skillGrid}>
-            <div className={styles.skillCard}><SiJavascript /><p>JavaScript</p></div>
-            <div className={styles.skillCard}><FaReact /><p>React</p></div>
-            <div className={styles.skillCard}><FaNodeJs /><p>Node.js</p></div>
-            <div className={styles.skillCard}><SiGatsby /><p>Gatsby</p></div>
-            <div className={styles.skillCard}><SiNextdotjs /><p>Next.js</p></div>
-            <div className={styles.skillCard}><SiTailwindcss /><p>Tailwind CSS</p></div>
-            <div className={styles.skillCard}><FaFigma /><p>Figma</p></div>
-            <div className={styles.skillCard}><FaGithub /><p>GitHub</p></div>
-      
-           {/* === এই নতুন কার্ডটি যোগ করুন === */}
-            <div className={styles.skillCard}>
-             <FaDocker />
-             <p>Docker</p>
-            </div>
-
-          </div>
-        </section>
-      </FadeInSection>
-
+       </section>
+     </FadeInSection>
+     
       {/* 6. Why Work With Me Section */}
       <FadeInSection>
         <section className={`${styles.whyWorkWithMe} ${styles.section}`}>

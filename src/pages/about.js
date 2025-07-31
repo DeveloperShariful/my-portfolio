@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import * as styles from '../styles/AboutPage.module.css';
 import { useInView } from 'react-intersection-observer';
+import { StaticImage } from 'gatsby-plugin-image';
 
 // অ্যানিমেশনের জন্য একটি Helper কম্পোনেন্ট
 const AnimatedSection = ({ children, className }) => {
@@ -26,10 +27,12 @@ const AboutPage = () => {
 
       {/* Hero Section */}
       <AnimatedSection className={styles.hero}>
-        <img 
-          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto.format&fit=crop" // আপনার আসল ছবির লিংক দিন
+        <StaticImage 
+          src="../images/myself.png" // <<--- সঠিক আপেক্ষিক পথ
           alt="Sharif ul Islam"
-          className={styles.profileImage} 
+          className={styles.profileImage}
+          placeholder="blurred"
+          layout="constrained"
         />
         <h1>About Me</h1>
         <h2>Passionate Web Developer & Lifelong Learner</h2>
